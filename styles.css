@@ -1,0 +1,64 @@
+/* styles.css */
+
+/* Whole page styling */
+body {
+    font-family: 'Dancing Script', cursive;
+    background-color: #A3B18A; /* Matte green */
+    color: #222222; /* Deep black for better readability */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Pad paper styling */
+.paper {
+    background-color: #fafafa;
+    padding: 40px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    position: relative;
+
+    /* Add paper texture */
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    background-size: cover;
+
+    /* Pad paper lines */
+    background-image: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+        url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    background-size: 100% 30px, cover;
+
+    padding-left: 60px;
+}
+
+/* Red margin line on the left */
+.paper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 40px;
+    bottom: 0;
+    width: 2px;
+    background-color: red;
+}
+
+/* Styling for the letter content */
+h1 {
+    color: #ff4d4d;
+    font-size: 32px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 16px;
+    color: #222222;
+}
